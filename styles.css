@@ -1,1 +1,13 @@
 /** main styles **/
+body {
+  background-color: coral;
+  margin-top: 200px;
+  color: white;
+  text-align: center;
+  font-family: monospace;
+  font-size: x-large;
+}
+
+p {
+  font-size: xx-large;
+}

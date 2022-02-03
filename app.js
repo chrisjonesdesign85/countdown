@@ -1,6 +1,6 @@
 const timeLeft = document.getElementById('time-left')
 
-const birthday = new Date('02/02/2022')
+const birthday = new Date('10/05/2022')
 const second = 1000
 const minute = second * 60
 const hour = minute * 60
@@ -25,9 +25,12 @@ function countDown() {
     }  
 
     const days = Math.floor(timeSpan / day)
-    const hours = Math.floor((timeSpan % days) / hour)
-    const minutes = Math.floor(hour / 60)
+    const hours = Math.floor((timeSpan % day) / hour)
+    const minutes = Math.floor((timeSpan % hour) / minute)
+    const seconds = Math.floor((timeSpan % minute) /second)
 
+    // timeLeft.innerHTML = days + 'days ' + hours + 'hours ' + minutes + 'minutes' + seconds + 'seconds '
+    timeLeft.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
 }
 
 timerId = setInterval(countDown, second)
